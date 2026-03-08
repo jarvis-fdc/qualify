@@ -145,39 +145,35 @@
       margin-top: 4px;
     }
 
-    /* ── Form section ── */
-    .form-section {
-      flex: 1;
-      padding: 0;
-      min-height: 600px;
-    }
-
-    .form-section > div[data-tf-live] {
-      min-height: 600px;
-    }
-
-    /* ── Loading state ── */
-    .form-loading {
+    /* ── CTA section ── */
+    .cta-section {
+      padding: 56px 40px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 80px 40px;
-      text-align: center;
-      color: var(--muted);
       gap: 16px;
     }
 
-    .spinner {
-      width: 32px;
-      height: 32px;
-      border: 2px solid rgba(201,168,76,0.2);
-      border-top-color: var(--gold);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+    .cta-btn {
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 18px 48px;
+      font-size: 17px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      letter-spacing: 0.2px;
+      transition: background 0.15s, transform 0.1s;
     }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
+    .cta-btn:hover { background: #dbb95a; }
+    .cta-btn:active { transform: scale(0.98); }
+
+    .cta-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
 
     /* ── How it works ── */
     .how-it-works {
@@ -308,13 +304,19 @@
     </div>
   </div>
 
-  <section class="form-section">
-    <div data-tf-live="XulaKcYT" style="width:100%;min-height:600px;"></div>
-    <noscript>
-      <div class="form-loading">
-        <p>Please enable JavaScript to load the pre-qualification form, or email us at <a href="mailto:qualify@frankeldecuba.com">qualify@frankeldecuba.com</a></p>
-      </div>
-    </noscript>
+  <section class="cta-section">
+    <button
+      data-tf-popup="XulaKcYT"
+      data-tf-opacity="100"
+      data-tf-size="100"
+      data-tf-iframe-props="title=FDC Pre-Qualification"
+      data-tf-transitive-search-params
+      data-tf-medium="snippet"
+      class="cta-btn"
+    >
+      Check my eligibility →
+    </button>
+    <p class="cta-note">Free · 2 minutes · No documents needed</p>
   </section>
 
   <section class="how-it-works">
